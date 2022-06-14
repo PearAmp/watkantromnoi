@@ -1,5 +1,8 @@
 <template>
   <div>
+    <ImageHeader />
+    <RecommendPage />
+    <Community />
   </div>
 </template>
 
@@ -8,3 +11,7 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

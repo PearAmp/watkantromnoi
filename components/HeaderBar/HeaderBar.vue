@@ -5,7 +5,7 @@
         <div class="logo">
           <img class="imageIcon" src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.6435-9/31945732_1717066051663720_2583667676039610368_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeErRaY9N8x7IZH-aoqMeZ7Onnm41PT3bQ-eebjU9PdtD6hjeUuOl7LoYhjXkiaMcLYB96UlpLMRRVg7DBtzrfRm&_nc_ohc=tEnQfiR_PjMAX_Cju8C&tn=_z4ScRnQjdZUWaSL&_nc_ht=scontent.fubp1-1.fna&oh=00_AT-6aJsTvKRVcSIjUNVgHXjd0XK5pzlT3213KuryR_ZkUw&oe=62CDFD60" />
            <div class="spaceimg"></div>
-          <h1>วัดกันทรอมน้อย</h1>
+          <h1 class="textHeader">วัดกันทรอมน้อย</h1>
         </div>
         <ul class="links">
           <li class="content-link"><NuxtLink to="/"><h3>หน้าแรก</h3></NuxtLink></li>
@@ -13,7 +13,6 @@
             <NuxtLink to="/local"><h3>ความเป็นมา</h3></NuxtLink>
           </li>
           <li class="content-link"><NuxtLink to="/vaccines"><h3>กิจกรรม</h3></NuxtLink></li>
-          <li class="content-link"> <NuxtLink to="/about"><h3>ด้านการศึกษา</h3></NuxtLink></li>
           <li class="content-link"><NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink></li>
         </ul>
         <div>
@@ -38,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   max-width: 100%;
   position: inherit;
@@ -52,6 +51,7 @@ export default {
   background-color: #FFF8E1;
 
 }
+
 h3 {
   font-weight: 400;
 }
@@ -156,7 +156,7 @@ nav .icon-burger .line {
     right: 0;
     bottom: 100%;
     width: auto;
-    height: 89%;
+    height: 91%;
     flex-direction: column;
     justify-content: space-evenly;
     color: #fff;
@@ -182,5 +182,44 @@ nav .icon-burger .line {
   nav :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
   }
+}
+@media screen and (max-width: 599px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .imageIcon {
+    max-width: 60px;
+    height: auto;
+  }
+  .spaceimg {
+    margin-right: 10px;
+  }
+  
+}
+@media screen and (min-width: 768px) and (max-width: 991px)  {
+  h1 {
+    font-size: 1.5rem;
+  } 
+  nav .links a {
+  display: block;
+  padding: 0;
+  padding-top: 25px;
+  font-size: 0.9rem;
+
+}
+
+    
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;
+  } 
+  nav .links a {
+  display: block;
+  padding: 0;
+  padding-top: 25px;
+  font-size: 0.9rem;
+
+}
 }
 </style>
