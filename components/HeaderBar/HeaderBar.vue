@@ -10,9 +10,9 @@
         <ul class="links">
           <li class="content-link"><NuxtLink to="/"><h3>หน้าแรก</h3></NuxtLink></li>
           <li class="content-link">
-            <NuxtLink to="/local"><h3>ความเป็นมา</h3></NuxtLink>
+            <NuxtLink to="/derivation"><h3>ความเป็นมา</h3></NuxtLink>
           </li>
-          <li class="content-link"><NuxtLink to="/vaccines"><h3>กิจกรรม</h3></NuxtLink></li>
+          <li class="content-link"><NuxtLink to="/activity"><h3>กิจกรรม</h3></NuxtLink></li>
           <li class="content-link"><NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink></li>
         </ul>
         <div>

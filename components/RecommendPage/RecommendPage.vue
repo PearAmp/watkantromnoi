@@ -85,7 +85,10 @@ export default {
   height: 400px;
 }
 }
-// .tt {
-//   background-color: #000;
-// }
+@media screen and (max-width: 1420px) {
+  .imageLeft {
+  height: 400px;
+}
+  
+}
 </style>

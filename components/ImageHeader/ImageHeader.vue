@@ -48,7 +48,7 @@ export default {
             src: require('@/static/watktn2.jpeg'),
           },
           {
-            src: require('@/static/watktn3.jpeg'),
+            src: require('@/static/watktn5.jpeg'),
           },
           {
             src: require('@/static/watktn4.jpeg'),
