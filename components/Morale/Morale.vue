@@ -54,9 +54,9 @@ export default {
 }
 h1 {
   font-size: 3rem;
-  color: #ffcc00;
+  color: #ff8f00;
   text-align: center;
-  text-shadow: 2px 2px #ff8f00;
+  text-shadow: 2px 2px #fff;
   background-image: url("@/static/backgroung1.jpg");
   border-radius: 50px;
   padding-left: 50px;
