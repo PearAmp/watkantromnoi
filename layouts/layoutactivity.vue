@@ -1,7 +1,8 @@
 <template>
 <div>
     <HeaderBar />
-        <h1>66666</h1>
+       <P3ImageHeader />
+       <P3activity />
 </div>
   
 </template>

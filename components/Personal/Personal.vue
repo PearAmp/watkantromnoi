@@ -99,6 +99,8 @@ export default {
 .container {
     margin-top: 100px;
     padding: 0;
+    max-width: 100%;
+    
 }
 .header {
     display: flex;
@@ -123,7 +125,7 @@ h1 {
 @media screen and (max-width: 599px) {
     .container {
         margin-top: 50px;
-        padding: 12px;
+        padding: 0;
     }
     h1 {
         font-size: 1.7rem;

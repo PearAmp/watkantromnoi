@@ -1,7 +1,10 @@
 <template>
 <div>
     <HeaderBar />
-    <h1>555555</h1>
+    <P2ImageHeader />
+    <P2Religiousplace />
+    <P2Seat />
+    <P2Video />
 </div>
   
 </template>
@@ -13,6 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 
 </style>

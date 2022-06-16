@@ -10,7 +10,7 @@
         <ul class="links">
           <li class="content-link"><NuxtLink to="/"><h3>หน้าแรก</h3></NuxtLink></li>
           <li class="content-link">
-            <NuxtLink to="/derivation"><h3>ความเป็นมา</h3></NuxtLink>
+            <NuxtLink to="/derivation"><h3>เกี่ยวกับ</h3></NuxtLink>
           </li>
           <li class="content-link"><NuxtLink to="/activity"><h3>กิจกรรม</h3></NuxtLink></li>
           <li class="content-link"><NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink></li>
@@ -155,7 +155,6 @@ nav .icon-burger .line {
     left: 0;
     right: 0;
     bottom: 100%;
-    width: auto;
     height: 91%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -183,6 +182,7 @@ nav .icon-burger .line {
     opacity: 0;
   }
 }
+
 @media screen and (max-width: 599px) {
   h1 {
     font-size: 1.5rem;
@@ -194,7 +194,23 @@ nav .icon-burger .line {
   .spaceimg {
     margin-right: 10px;
   }
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav .links[data-v-07d9cfdc] {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 100px;
+  z-index: 999;
   
+    
+}
 }
 @media screen and (min-width: 768px) and (max-width: 991px)  {
   h1 {

@@ -6,28 +6,28 @@
 
     <div class="contentImage">
         <v-row>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6">
                 <img class="images" src="@/static/tamma1.png" alt="">
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6">
                 <img class="images" src="@/static/tamma2.png" alt="">
             </v-col>
         </v-row>
 
         <v-row class="mt-8">
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6">
                 <img class="images" src="@/static/tamma3.png" alt="">
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6"> 
                 <img class="images" src="@/static/tamma4.png" alt="">
             </v-col>
         </v-row>
 
         <v-row class="mt-8">
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6">
                 <img class="images" src="@/static/tamma5.png" alt="">
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" sm="6">
                 <img class="images" src="@/static/tamma6.png" alt="">
             </v-col>
         </v-row>
@@ -83,9 +83,27 @@ h1 {
 @media screen and (max-width: 599px) {
   .container {
     margin-top: 50px;
+    
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
+  .contentImage {
+    padding: 50px;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .images {
+    padding: 0;
+     max-width: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   .images {
+     max-width: 300px;
+  }
+
+  
 }
 </style>
