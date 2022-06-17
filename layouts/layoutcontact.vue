@@ -1,7 +1,8 @@
 <template>
 <div>
     <HeaderBar />
-<h1>77777777</h1>  
+    <P4ImageHeader />
+    <P4Contact />
 </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
        <div>
-          <v-carousel class="Onweb" hide-delimiters height="700" cycle show-arrows-on-hover="false" show-arrows="false" >
+          <v-carousel class="Onweb" hide-delimiters height="700" cycle  >
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -8,7 +8,7 @@
     ></v-carousel-item>
   </v-carousel>
   <!-- notebook -->
-  <v-carousel class="notebook" hide-delimiters height="500" cycle show-arrows-on-hover="false" show-arrows="false" >
+  <v-carousel class="notebook" hide-delimiters height="500" cycle  >
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -16,7 +16,7 @@
     ></v-carousel-item>
   </v-carousel>
   <!-- ipad -->
-  <v-carousel class="Ipad" hide-delimiters height="500" cycle show-arrows-on-hover="false" show-arrows="false" >
+  <v-carousel class="Ipad" hide-delimiters height="500" cycle  >
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -25,7 +25,7 @@
   </v-carousel>
 
        <!-- media -->
-         <v-carousel class="Media" hide-delimiters height="300" cycle show-arrows-on-hover="false" show-arrows="false" >
+         <v-carousel class="Media" hide-delimiters height="300" cycle  >
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"

@@ -53,7 +53,8 @@ export default {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 h3:hover {
   color: #FFB300;

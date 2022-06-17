@@ -150,6 +150,9 @@ h3 {
   
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 20px;
+  }
 
   h2 {
     margin-top: 30px;
