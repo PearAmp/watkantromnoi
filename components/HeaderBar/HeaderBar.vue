@@ -1,67 +1,88 @@
 <template>
-   <div>
-     <nav>
+  <div>
+    <nav>
       <div class="container">
         <input id="nav-toggle" type="checkbox" />
         <div class="logo">
-          <img class="imageIcon" src="@/static/icons/logo.jpeg" />
-           <div class="spaceimg"></div>
+          <div class="spaceimg"></div>
           <h1 class="textHeader">วัดกันทรอมน้อย</h1>
         </div>
         <ul class="links">
-          <li class="content-link"><NuxtLink to="/"><h3>หน้าแรก</h3></NuxtLink></li>
+          <li class="content-link">
+            <NuxtLink to="/"><h3>หน้าแรก</h3></NuxtLink>
+          </li>
           <li class="content-link">
             <NuxtLink to="/derivation"><h3>เกี่ยวกับ</h3></NuxtLink>
           </li>
-          <li class="content-link"><NuxtLink to="/activity"><h3>กิจกรรม</h3></NuxtLink></li>
-          <li class="content-link"><NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink></li>
+          <li class="content-link">
+            <NuxtLink to="/activity"><h3>กิจกรรม</h3></NuxtLink>
+          </li>
+          <li class="content-link">
+            <NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink>
+          </li>
         </ul>
-        <div>
-         
-        </div>
+        <div></div>
       </div>
-
-     
     </nav>
-      <!-- media -->
+    <!-- media -->
 
-     <div class="media">
-
-    
-  
-      </div>
-   </div>
+    <div class="media">
+      <v-app>
+        <v-app-bar color="#FFECB3" class="flex-grow-0" app dark height="70">
+          <v-app-bar-nav-icon
+            v-click-outside="onClickOutside"
+            @click="drawer = true"
+          ></v-app-bar-nav-icon>
+          <div class="itemhead">
+            <div>
+              <div class="itemcenter">
+                <img class="logo" src="@/static/icons/logo.jpeg" alt="" />
+                <h1>วัดกันทรอมน้อย</h1>
+              </div>
+            </div>
+          </div>
+        </v-app-bar>
+        <div class="listmenu">
+          <v-navigation-drawer app v-model="drawer" width="80%" color="#FFECB3">
+            <v-list dense nav>
+              <div class="sidemenu">
+                <NuxtLink to="/">
+                  <h3>หน้าแรก</h3>
+                </NuxtLink>
+                <NuxtLink to="/derivation">
+                  <h3>เกี่ยวกับ</h3>
+                </NuxtLink>
+                <NuxtLink to="/activity">
+                  <h3>กิจกรรม</h3>
+                </NuxtLink>
+                <NuxtLink to="/contact">
+                  <h3>ช่องทางติดต่อ</h3>
+                </NuxtLink>
+              </div>
+            </v-list>
+          </v-navigation-drawer>
+        </div>
+      </v-app>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'HeaderBar',
-    
+  name: 'HeaderBar',
+  data: () => ({
+    drawer: false,
+  }),
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-  max-width: 100%;
-  position: inherit;
-  z-index: 10;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-family: 'Monserrat', sans-serif;
-  padding: 0.5%;
-  height: 100px;
-  background-color: #FFF8E1;
-
-}
-
 h3 {
   font-weight: bold;
   font-size: 1.25rem;
 }
 h3:hover {
-  color: #FFB300;
-
+  color: #ffb300;
 }
 
 .imgicon {
@@ -88,11 +109,10 @@ nav .links {
   padding-top: 30px;
 }
 .spaceimg {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 nav .links li {
   list-style: none;
-
 }
 nav .links a {
   display: block;
@@ -101,17 +121,15 @@ nav .links a {
   font-weight: bold;
   text-decoration: none;
   color: #000;
-
 }
 .imageIcon {
-    width: 100%;
-    max-width: 100px;
-    height: 80px;
-    border-radius: 50px;
+  width: 100%;
+  max-width: 100px;
+  height: 80px;
+  border-radius: 50px;
 }
 .content-link {
   padding-top: 15px;
-  
 }
 
 .burger-icon {
@@ -133,99 +151,84 @@ nav .icon-burger .line {
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 576px) {
-  nav .logo {
-    width: 75%;
-    justify-content: center;
-    padding-top: 10px;
-    margin-left: 40px;
-  }
 
-  .imgicon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .burger-icon {
-    display: block;
-    position: absolute;
-    top: 2rem;
-    right: 10px;
-  }
-  nav .links {
-    float: none;
-    position: fixed;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    bottom: 100%;
-    height: 91%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: #fff;
-    background-color: #fff;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-  }
-  nav .links a {
-    font-size: 20px;
-  }
-  nav :checked ~ .links {
-    bottom: 0;
-  }
-  nav .icon-burger {
-    display: block;
-  }
-  nav :checked ~ .icon-burger .line:nth-child(1) {
-    transform: translate(10px) rotate(225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(3) {
-    transform: translate(10px) rotate(-225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(2) {
-    opacity: 0;
-  }
-
+.media {
+  display: none;
 }
- .media {
-    display: none;
-  }
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 1.5rem;
-  } 
+  }
   nav .links a {
-  display: block;
-  padding: 0;
-  padding-top: 25px;
-  font-size: 0.9rem;
-
+    display: block;
+    padding: 0;
+    padding-top: 25px;
+    font-size: 0.9rem;
+  }
 }
-}
-@media screen and (min-width: 768px) and (max-width: 991px)  {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   h1 {
     font-size: 1.5rem;
-  } 
+  }
   nav .links a {
-  display: block;
-  padding: 0;
-  padding-top: 25px;
-  font-size: 0.9rem;
-
-}
-
-    
+    display: block;
+    padding: 0;
+    padding-top: 25px;
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 599px) {
   .media {
     display: block;
     width: 100%;
-    height: 50px;
   }
   .container {
     display: none;
   }
- 
+
+  .sidemenu {
+    margin-top: 10px;
+    padding: 12px;
+    padding-bottom: 0;
+  }
+  h3 {
+    color: #000;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  h3:hover {
+    color: #ffb300;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .listmenu {
+    position: relative;
+  }
+
+  .v-application a {
+    text-decoration: none;
+  }
+  .logo {
+    border-radius: 30px;
+    max-width: 50px;
+    margin-left: 30px;
+  }
+  .itemcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  h1 {
+    color: #ffb300;
+    margin-left: 30px;
+  }
 }
 </style>

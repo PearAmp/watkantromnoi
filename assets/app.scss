@@ -24,13 +24,17 @@ h2 {
 }
 }
 
-// @media screen and (max-width: 599px)  {
-//     .v-image__image, .v-image__placeholder {
+@media screen and (max-width: 599px)  {
+    .v-application--wrap  {
+        min-height: 0 !important;
+       }
+       .mdi:before, .mdi-set {
+        color: #000;
+       }
+
     
-       
-//     }
-    
-// }
+}
+
 // @media screen and (min-width: 768px) and (max-width: 991px)  {
 //     .v-image__image, .v-image__placeholder {
       
