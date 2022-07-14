@@ -1,9 +1,10 @@
 <template>
-    <nav>
+   <div>
+     <nav>
       <div class="container">
         <input id="nav-toggle" type="checkbox" />
         <div class="logo">
-          <img class="imageIcon" src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.6435-9/31945732_1717066051663720_2583667676039610368_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeErRaY9N8x7IZH-aoqMeZ7Onnm41PT3bQ-eebjU9PdtD6hjeUuOl7LoYhjXkiaMcLYB96UlpLMRRVg7DBtzrfRm&_nc_ohc=tEnQfiR_PjMAX_Cju8C&tn=_z4ScRnQjdZUWaSL&_nc_ht=scontent.fubp1-1.fna&oh=00_AT-6aJsTvKRVcSIjUNVgHXjd0XK5pzlT3213KuryR_ZkUw&oe=62CDFD60" />
+          <img class="imageIcon" src="@/static/icons/logo.jpeg" />
            <div class="spaceimg"></div>
           <h1 class="textHeader">วัดกันทรอมน้อย</h1>
         </div>
@@ -16,24 +17,26 @@
           <li class="content-link"><NuxtLink to="/contact"><h3>ช่องทางติดต่อ</h3></NuxtLink></li>
         </ul>
         <div>
-          <div class="burger-icon">
-            <ul>
-              <label for="nav-toggle" class="icon-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </label>
-            </ul>
-          </div>
+         
         </div>
       </div>
+
+     
     </nav>
+      <!-- media -->
+
+     <div class="media">
+
+    
+  
+      </div>
+   </div>
 </template>
 
 <script>
 export default {
     name: 'HeaderBar',
-
+    
 }
 </script>
 
@@ -182,35 +185,21 @@ nav .icon-burger .line {
   nav :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
   }
-}
 
-@media screen and (max-width: 599px) {
+}
+ .media {
+    display: none;
+  }
+@media screen and (max-width: 1024px) {
   h1 {
     font-size: 1.5rem;
-  }
-  .imageIcon {
-    max-width: 60px;
-    height: auto;
-  }
-  .spaceimg {
-    margin-right: 10px;
-  }
-  h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  nav .links[data-v-07d9cfdc] {
-  width: 100%;
+  } 
+  nav .links a {
+  display: block;
   padding: 0;
-  margin: 0;
-  left: 0;
-  right: 0;
-  padding-bottom: 100px;
-  z-index: 999;
-  
-    
+  padding-top: 25px;
+  font-size: 0.9rem;
+
 }
 }
 @media screen and (min-width: 768px) and (max-width: 991px)  {
@@ -227,16 +216,16 @@ nav .icon-burger .line {
 
     
 }
-@media screen and (max-width: 1024px) {
-  h1 {
-    font-size: 1.5rem;
-  } 
-  nav .links a {
-  display: block;
-  padding: 0;
-  padding-top: 25px;
-  font-size: 0.9rem;
 
-}
+@media screen and (max-width: 599px) {
+  .media {
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  .container {
+    display: none;
+  }
+ 
 }
 </style>
